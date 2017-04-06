@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8"> 
+ <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height=0 id=wb name=wb width=0></OBJECT>
+ <OBJECT ID="ID100Control" CLASSID="CLSID:BAD80877-E3D2-41CC-91AE-C7FD9D019E36"></OBJECT>
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#tips {
+    background-color:red;
+    color:white;
+    text-align:center;
+	
+    padding:5px;
+}
+
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px;	      
+}
+
+#idguaid {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:40%;
+    float:left;
+    padding:5px;	      
+}
+
+#section {
+    width:350px;
+    float:right;
+	width:50%;
+    padding:10px;	 
+	text-align:center;	
+}
+
+#idinfo {
+    width:350px;
+    float:right;
+	width:100%;
+    padding:10px;	 
+	text-align:center;	
+	display:none
+}
+
+
+
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+   padding:5px;	 	 
+}
+
+/* button 
+---------------------------------------------- */
+.button {
+        display: inline-block;
+        zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+        *display: inline;
+        vertical-align: baseline;
+       /* margin: 0 2px; */
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        font: 14px/100% Arial, Helvetica, sans-serif;
+        padding: .5em 2em .55em;
+        text-shadow: 0 1px 1px rgba(0,0,0,.3);
+        -webkit-border-radius: .5em; 
+        -moz-border-radius: .5em;
+        border-radius: .5em;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+        box-shadow: 0 1px 2px rgba(0,0,0,.2);
+		/*position:absolute;*/
+		position:absolute;
+		bottom:0
+}
+
+.button:hover {
+        text-decoration: none;
+}
+.button:active {
+        position: relative;
+        top: 1px;
+}
+
+.bigrounded {
+        -webkit-border-radius: 2em;
+        -moz-border-radius: 2em;
+        border-radius: 2em;
+}
+.medium {
+        font-size: 12px;
+        padding: .4em 1.5em .42em;
+}
+.small {
+        font-size: 11px;
+        padding: .2em 1em .275em;
+}
+
+/* red */
+.red {
+        color: #faddde;
+        border: solid 1px #980c10;
+        background: #d81b21;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ed1c24), to(#aa1317));
+        background: -moz-linear-gradient(top,  #ed1c24,  #aa1317);
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ed1c24', endColorstr='#aa1317');
+}
+.red:hover {
+        background: #b61318;
+        background: -webkit-gradient(linear, left top, left bottom, from(#c9151b), to(#a11115));
+        background: -moz-linear-gradient(top,  #c9151b,  #a11115);
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9151b', endColorstr='#a11115');
+}
+.red:active {
+        color: #de898c;
+        background: -webkit-gradient(linear, left top, left bottom, from(#aa1317), to(#ed1c24));
+        background: -moz-linear-gradient(top,  #aa1317,  #ed1c24);
+        filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#aa1317', endColorstr='#ed1c24');
+}
+
+
+
+@page:rightright{    
+  @bottombottom-left {   
+    margin: 10pt 0 30pt 0;   
+    border-top: .25pt solid #666;   
+    content: "Our Cats";   
+    font-size: 9pt;   
+    color: #333;   
+  }   
+    
+    
+  @bottombottom-rightright {    
+    margin: 10pt 0 30pt 0;   
+    border-top: .25pt solid #666;   
+    content: counter(page);   
+    font-size: 9pt;   
+  }   
+    
+    
+  @top-rightright {   
+    content:  string(doctitle);   
+    margin: 30pt 0 10pt 0;   
+    font-size: 9pt;   
+    color: #333;   
+  }   
+}  
+
+</style>
+
+
+<script type="text/javascript" src="testhead.js"></script>  
+<script type="text/javascript" src="testmyhead.js"></script> 
+
+<script type="text/javascript">
+function printpage()
+  {
+var headstr = "<html><head><title></title></head><body>";  
+var footstr = "</body>";  
+var printData = document.getElementById("idinfo").innerHTML;
+var oldstr = document.body.innerHTML;  
+document.body.innerHTML = headstr+newstr+footstr;  
+window.print();  
+  }
+  
+  
+
+  
+  function imgprint(imgdata){
+  var printData = document.getElementById("tishi").innerHTML;
+  window.document.body.innerHTML = imgdata;
+  }
+  
+ function viewprintpage()
+  {
+     wb.execwb(7,1);
+  } 
+  
+ function openwin2( headphoto){
+OpenWindow=window.open("", "newwin", "height=250, width=250,toolbar=no ,scrollbars="+scroll+",menubar=no"); 
+OpenWindow.document.write("<TITLE>dollare雄仔工作室</TITLE>");  
+OpenWindow.document.write("<BODY BGCOLOR=#ffffff>");  
+OpenWindow.document.write("<h1>Hello!</h1>");  
+OpenWindow.document.write("New window opened!<br> is Good"); 
+//var headdata="data:image/jpg;base64,+img
+//<img src="readid.jpg" />
+//</image>
+var imgsrc = '<img src='+'"readid.jpg"'+'/>';
+var imgsrc2 = '<img src='+headdata+'/>';
+var imgsrc3 = '<img src='+headphoto+'/>';
+OpenWindow.document.write("<br/>")
+OpenWindow.document.write(imgsrc3);
+OpenWindow.document.write("</BODY>");  
+OpenWindow.document.write("</HTML>");  
+OpenWindow.document.close();
+}  
+
+ function openwin( ){
+OpenWindow=window.open("", "newwin", "height=250, width=250,toolbar=no ,scrollbars="+scroll+",menubar=no"); 
+OpenWindow.document.write("<TITLE>dollare雄仔工作室</TITLE>");  
+OpenWindow.document.write("<BODY BGCOLOR=#ffffff>");  
+OpenWindow.document.write("<h1>Hello!</h1>");  
+OpenWindow.document.write("New window opened!<br> is Good"); 
+//var headdata="data:image/jpg;base64,+img
+//<img src="readid.jpg" />
+//</image>
+var imgsrc = '<img src='+'"readid.jpg"'+'/>';
+var imgsrc2 = '<img src='+headdata+'/>';
+var imgsrc3 = '<img src='+headimg+'/>';
+OpenWindow.document.write("<br/>")
+OpenWindow.document.write(imgsrc3);
+OpenWindow.document.write("</BODY>");  
+OpenWindow.document.write("</HTML>");  
+OpenWindow.document.close();
+}  
+  
+function newprint(idshow)
+{
+ confirm(idshow); 
+}
+ 
+ //var globalimg;
+function myClick()  
+{  
+   // alert("123"); 
+   //document.getElementById("tips").style.display='none';  
+   //document.getElementById("section").style.display='none'; 
+   //document.getElementById("idguaid").style.display='none'; 
+   // newprint();
+   //var idshow=document.getElementById("idinfo");  
+   //idshow.style.display="block";
+    var jobj = {"cardno":"35058319851005547X","name":" 陈**","sex":"男","nation":" 汉","birth":"1985年*月* 日","address":"福建省南安市*","org":"南安市公安局"};
+	
+	var retVar =  {"ret":"0",  "info":{"cardno":"35058319851005547X","name":" 陈**","sex":"男","nation":" 汉","birth":"1985年*月* 日","address":"福建省南安市*","org":"南安市公安局"}};
+    var username = retVar.info.name;
+	
+	//ReadIDEx();
+	
+    var retCnt = ID100Control.Connect();
+    alert(retCnt);
+    var btsr = ID100Control.ReadContentEx();
+    //alert(btsr);
+    var idJson = eval("(" + btsr + ")");
+    //alert(idJson.ret);
+	//alert(D100Control.GetPhotoFileName());
+	//alert(idJson.info.photo);
+    var retInfo = idJson;
+ 
+  // newprint(jobj.org);
+   //var tis='你的姓名是'+jobj.name+'\n'+'确认请继续';
+   var tis=username;
+   //if(confirm(tis))
+   {
+   //document.getElementById("tips").style.display='none';  
+   //document.getElementById("section").style.display='none'; 
+   //document.getElementById("idguaid").style.display='none'; 
+   var idshow=document.getElementById("idinfo"); 
+   var headimg = document.getElementById("headimg");
+   var base64f = "data:image/jpeg;base64";
+   
+   //myheadsrc.src = string.concat(base64f,retInfo.info.photo);
+   //var mystr=new stringConnect();
+   //mystr.append(base64f);
+   //mystr.append(retInfo.info.photo);
+   //var photostr=base64f+retInfo.info.photo;
+   //var headimg = "data:image/png;base64,"+retInfo.info.photo;
+   username = base64f+retInfo.info.name;//retInfo.info.name;
+   document.getElementById("myname").innerHTML=username;
+   //myname
+   //headimg.src="heads.jpg";
+   
+   //如果是写在文件中赋值是正常的
+    headimg.src=testheaddata;
+	//读入并显示,有问题，不能正常显示，看来是str类型和base64类型不一样
+	//var headimg = '"data:image/png;base64,'+retInfo.info.photo+'"';
+	//在新窗口可以正常显示了
+	var headph = '"data:image/png;base64,'+retInfo.info.photo+'"';
+	
+	openwin2( headph);
+	//headimg.src=headimg；
+   //从base64中读取数据并显示
+   //headimg.src=photostr;
+   //<image src="data:image/png;base64,
+   
+   //headimg.src=headdata;
+   idshow.style.display="block";
+   
+   //打开一个新页面
+   //showDiv();
+   //var mesg=open("cnrose","DisplayWindow","toolbar=no,,menubar=no,location=no,scrollbars=no"); 
+  // mesg.document.write("<HEAD><TITLE>test</TITLE></HEAD>"); 
+  // mesg.document.write("<body>zz</body>"); 
+
+   //viewprintpage();
+   //imgprint();
+   //输出到新文件
+   //imgprint(retInfo.info.photo);
+   ID100Control.DisConnect();
+   }
+   //else{
+   //document.getElementById("section").style.display='none'; 
+   //}
+   
+   /*
+   var JSONObject = {"cardno":"35058319851005547X", "name":" 陈**","sex":"男","nation":" 汉", "birth":"1985  年*月* 日", "address":"福建省南安市*",  "org":"南安市公安局"}；
+   */
+   
+   //newprint(idshow);
+}  
+
+
+function GetContent()
+{
+  alert(ID100Control.ReadContent());
+}
+
+function Connect()
+{
+  alert(ID100Control.Connect());
+}
+
+function Disconnect()
+{
+  ID100Control.DisConnect();
+}
+
+var userinfo;
+function ReadIDEx(){
+/*
+ if(!ID100Control.Connect()){
+   alert('connect fail!');
+   return ;
+ }
+ */
+// alert(ID100Control.Connect());
+ //alert(ID100Control.ReadContent());
+ //var retDis = ID100Control.DisConnect();
+ //alert(retDis);
+ var retCnt = ID100Control.Connect();
+ alert(retCnt);
+ var btsr = ID100Control.ReadContentEx();
+ //alert(btsr);
+ var idJson = eval("(" + btsr + ")");
+ alert(idJson.ret);
+ alert(idJson.info.photo);
+ userinfo = idJson;
+ 
+ //ID100Control.DisConnect();
+ return ;
+ 
+ 
+}
+
+
+function showDiv()
+{
+var Idiv     = document.getElementById("Idiv");
+var mou_head = document.getElementById('mou_head');
+Idiv.style.display = "block";
+//以下部分要将弹出层居中显示
+Idiv.style.left=(document.documentElement.clientWidth-Idiv.clientWidth)/2+document.documentElement.scrollLeft+"px";
+Idiv.style.top =(document.documentElement.clientHeight-Idiv.clientHeight)/2+document.documentElement.scrollTop-50+"px";
+ 
+//以下部分使整个页面至灰不可点击
+var procbg = document.createElement("div"); //首先创建一个div
+procbg.setAttribute("id","mybg"); //定义该div的id
+procbg.style.background = "#000000";
+procbg.style.width = "100%";
+procbg.style.height = "100%";
+procbg.style.position = "fixed";
+procbg.style.top = "0";
+procbg.style.left = "0";
+procbg.style.zIndex = "500";
+procbg.style.opacity = "0.6";
+procbg.style.filter = "Alpha(opacity=70)";
+//背景层加入页面
+document.body.appendChild(procbg);
+document.body.style.overflow = "hidden"; //取消滚动条
+ 
+//以下部分实现弹出层的拖拽效果
+var posX;
+var posY;
+mou_head.onmousedown=function(e)
+{
+if(!e) e = window.event; //IE
+posX = e.clientX - parseInt(Idiv.style.left);
+posY = e.clientY - parseInt(Idiv.style.top);
+document.onmousemove = mousemove;
+}
+document.onmouseup = function()
+{
+document.onmousemove = null;
+}
+function mousemove(ev)
+{
+if(ev==null) ev = window.event;//IE
+Idiv.style.left = (ev.clientX - posX) + "px";
+Idiv.style.top = (ev.clientY - posY) + "px";
+}
+}
+function closeDiv() //关闭弹出层
+{
+var Idiv=document.getElementById("Idiv");
+Idiv.style.display="none";
+document.body.style.overflow = "auto"; //恢复页面滚动条
+var body = document.getElementsByTagName("body");
+var mybg = document.getElementById("mybg");
+body[0].removeChild(mybg);
+}
+
+</script>
+
+</head>
+
+<body>
+
+<div id="header">
+<h1>Wellcome to ISE traing system</h1>
+</div>
+
+<div id="tips">
+<h1>请把身份证放置在读卡器并点击开始按钮</h1>
+</div>
+
+
+
+
+<div id="idguaid">
+
+<div id ="idinfo">
+<h1 id="myname">看不到</h1>
+<image id="headimg">
+</image>
+</div>
+
+<!--
+<img src="readid.jpg" />
+-->
+</div>
+
+<div id="section">
+<div id="tishi" hight="100">
+学员需要认真阅读培训内容并参加培训，如果你同意培训流程并同意遵守相关规则。为保证双方权益，请确认相关条文。如继续则表示你同意并接受。
+</div>
+<div id="bt" align="center" >
+<button onClick="myClick()">读卡</button></div>  
+<input type="button" onclick="openwin()" value="打开窗口">  
+<!--
+<input class="button white" type="button" value="继续" /> 
+
+-->
+</div>
+<br /><br />
+<!--
+<input class="button white" type="button" value="继续" /> 
+-->
+
+<!--弹出层开始-->
+<div id="Idiv" style="display:none;   position:absolute; z-index:1000; background:#67a3d9;">
+    <div id="mou_head" style="width="500px; height=500px;z-index:1001; position:absolute;">这个是用来实现拖层</div>
+    <input type="button" value="关闭" onclick="closeDiv();" />
+</div>
+
+
+<div id="footer">
+Copyright ? isehsa.com
+</div>
+
+</body>
+</html>
