@@ -27,7 +27,9 @@
 
 #tips {
    
+   /*
     background-color:#eeeeee;
+    */
     overflow:hidden
     height:550px;
     width:40%; 
@@ -35,7 +37,12 @@
     line-height:30px;
    
     float:right;
-    white-space: nowrap
+    white-space: nowrap;
+    text-align:center;
+    /*
+     
+    */
+   
     /*
     border-style:dashed; 
     width:auto; 
@@ -48,6 +55,67 @@
      clear:both;
     */	      
 }
+
+#lefttips {
+   
+   /*
+    background-color:#eeeeee;
+    */
+    overflow:hidden
+    height:550px;
+    width:100%; 
+  
+    line-height:30px;
+   
+    float:left;
+    white-space: nowrap;
+    text-align:center;
+     
+}
+
+#tipsitem {
+   
+   /*
+    background-color:#eeeeee;
+    */
+    overflow:hidden
+    height:100%;
+    width:100%; 
+    text-align:left; 
+  
+    line-height:30px;
+    font-size:20px;
+    float:right;
+    white-space: nowrap;
+    
+
+    /*
+        border-style:dashed; 
+    padding:5px;
+    text-align:left;
+    */
+      
+}
+
+ol.tip span {
+	font-weight:bold;
+	color:#ff9955;
+	}
+	
+.nextstep {
+	/*
+	background-color:yellow;
+	*/
+	bottom:0px;
+    width:100%; 
+    text-align:center;
+	}	
+	
+.btn{
+    width:200px;
+    height:50px;
+    font-size:20px;
+}	
 
 #tiscontain {
 	line-height:30px;
