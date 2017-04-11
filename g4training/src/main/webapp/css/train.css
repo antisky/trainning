@@ -97,6 +97,22 @@
       
 }
 
+#idinfo {
+   
+
+    overflow:hidden
+    height:100%;
+    width:100%; 
+    text-align:left; 
+  
+    line-height:30px;
+    font-size:20px;
+    float:right;
+    white-space: nowrap;
+    
+      
+}
+
 ol.tip span {
 	font-weight:bold;
 	color:#ff9955;

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+ <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height=0 id=wb name=wb width=0></OBJECT>
+ <OBJECT ID="ID100Control" CLASSID="CLSID:BAD80877-E3D2-41CC-91AE-C7FD9D019E36"></OBJECT>
+ <link rel="stylesheet" type="text/css" href="css/train.css" />
+<style>
+</style>
+
+<!--  
+<script type="text/javascript" src="trainmain.js">
+</script> 
+-->
+<script type="text/javascript" src="js/readcard.js"></script>
+<script type="text/javascript" src="js/trainmain.js"></script>
+<script type="text/javascript" src="js/testmyhead.js"></script>
+<!-- 
+<script type="text/javascript">
+function foward2readcard()
+{
+	//alert("hello world");
+	location.href='readcard.html';
+	
+}
+</script>
+ --> 
+</head>
+
+<body>
+<div id="header">
+<h1>ISA HSSE Training System</h1>
+</div>
+
+
+<div id="nowrap">
+<img src="images/readid.jpg" height="500px" ></td>
+</div>
+
+<div id="tips">
+<div id="lefttips">
+<h1>读取身份证</h1>
+<div id="tipsitem">
+ 
+<ol class="tip">
+
+<span>
+ 请认真阅读使用流程并按提示进行培训
+<hr>
+<li>按图示把身份证放在读卡器上面</li>
+<hr>
+<li>读取身份证后核对个人信息</li>
+<hr>
+<li>核对正确无误后确认</li>
+<hr>
+<li>取回身份证</li>
+<hr>
+</span>
+</ol>
+
+
+<div class="nextstep">
+<input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="readCard()" value="确认"/>
+<input type="button" class="btn" name="buttonPre" id="buttonPre"  onclick="backward2main()" value="取消"/>
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+<div id="footer">
+Copyright ? www.isa-hsse.com
+</div>
+
+</body>
+</html>
