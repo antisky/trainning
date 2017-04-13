@@ -19,11 +19,17 @@
     border-style:dashed;
      width:60%; 
     padding:5px;	
-    */
-
-    
+    */  
        
 }
+
+/*
+ padding-bottom:20px; 
+*/
+
+
+
+
 
 #tips {
    
@@ -97,6 +103,16 @@
       
 }
 
+#printdiv {
+   
+
+    overflow:hidden
+    height:100%;
+    width:100%; 
+    
+      
+}
+
 #idinfo {
    
 
@@ -125,6 +141,7 @@ ol.tip span {
 	bottom:0px;
     width:100%; 
     text-align:center;
+    padding-bottom:0px;
 	}	
 	
 .btn{

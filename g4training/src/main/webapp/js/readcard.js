@@ -2,7 +2,8 @@
 	
 function backward2main()
 {
-	location.href=history.go(-1);
+	//location.href=history.go(-1);
+	location.href='trainmain.html';
 	//alert("next");
 	//location.href='readcard.html';
 	//window.open('readcard.html','','width=720,height=500,resizable=yes,scrollbars=yes,status=no');
@@ -27,6 +28,25 @@ function readCard()
 	 */
 	//ID100Control.DisConnect();
 	//
+	/**
+	 * 1,初始化连接，如果连接不成功，提示未初始化，请检查读卡器连接情况。不进行跳转
+	 * 2，如果读取身份证信息不成功，提示读取失败，提示请重新放置
+	 * 3，如果读取身份证成功，跳转
+	 */
+	
+	/*
+	var retCnt = ID100Control.Connect();
+	//alert(retCnt);
+	if(retCnt){
+	    var btsr = ID100Control.ReadContentEx();
+	    ID100Control.disconect();
+	}else{
+		//alert unable to read card!
+		var msg = ID100Control.getLastErr();
+		alert(msg);
+		return;
+	}
+	*/
 	location.href='confirminfo.html';
 	
 }	
