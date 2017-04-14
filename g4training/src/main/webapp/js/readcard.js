@@ -304,11 +304,11 @@ function readCard()
 	    var btsr = ID100Control.ReadContentEx();
 	    var idJson = eval("(" + btsr + ")");
 	    var retInfo = idJson;
-	    alert(retInfo.ret);
+	    myalert(retInfo.ret);
 	    var retv = retInfo.ret;
 	 // ID100Control.disconect();
 	    if(retv == 0){
-	    	alert(retInfo.info.name);
+	    	myalert(retInfo.info.name);
 	    	udata = retInfo.info;
 	    	//location.href='confirminfo.html?cc='+retInfo.info.name;
 	    	//不使用跳转方式//
