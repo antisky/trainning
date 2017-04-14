@@ -33,6 +33,9 @@
 
 #tips {
    
+
+
+    
    /*
     background-color:#eeeeee;
     */
@@ -64,6 +67,9 @@
 
 #lefttips {
    
+    border-style:dashed; 
+    padding:1px;
+    
    /*
     background-color:#eeeeee;
     */
@@ -138,10 +144,13 @@ ol.tip span {
 	/*
 	background-color:yellow;
 	*/
-	bottom:0px;
+	border-style:dashed; 
+    padding:1px;
+    
+	bottom:10px;
     width:100%; 
     text-align:center;
-    padding-bottom:0px;
+
 	}	
 	
 .btn{

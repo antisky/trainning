@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+ <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height=0 id=wb name=wb width=0></OBJECT>
+ <OBJECT ID="ID100Control" CLASSID="CLSID:BAD80877-E3D2-41CC-91AE-C7FD9D019E36"></OBJECT>
+ <link rel="stylesheet" type="text/css" href="css/train.css">
+<style>
+</style>
+
+<!--  
+<script type="text/javascript" src="trainmain.js">
+</script> 
+-->
+<script type="text/javascript" src="js/readcard.js"></script>
+<script type="text/javascript" src="js/trainmain.js"></script>
+<!-- 
+<script type="text/javascript" src="js/testmyhead.js"></script>
+ -->
+<script type="text/javascript" src="js/viewmedia.js"></script>
+<script type="text/javascript" src="js/printer.js"></script>
+<!-- 
+<script type="text/javascript">
+function foward2readcard()
+{
+	//alert("hello world");
+	location.href='readcard.html';
+	
+}
+</script>
+ --> 
+</head>
+<!-- 
+<body onload="confirmme()">
+<body >
+-->
+<body >
+<div id="header">
+<h1>ISA HSSE Training System</h1>
+</div>
+
+
+<div id="nowrap">
+<div id="printerbg">
+<img src="images/printer.jpg" height="500px">
+</div>
+<!--  
+
+<div id="printdiv" >
+-->
+<div id="printdiv" style="display:none">
+
+<!-----------start print----------->
+
+<table width="100%"    cellspacing="0px" style="border-collapse:collapse">
+<caption>
+<h1>电信培训上岗确认书</h1>
+</caption>
+<!--
+tr 行
+td 列
+-->
+
+    <tr>  
+	    <th>姓名</th>
+        <td>李x</td>
+		
+		<td rowspan="5">
+		<img src="images/heads.jpg"/>
+		</td>
+    </tr>
+	
+	<tr>
+        <th>证书编号</th>
+        <td>x0099</td>	
+    </tr>
+	
+    <tr>
+        <th>出生年月</th>
+        <td>2017年4月13日</td>	
+    </tr>
+	<tr>
+        <th>性别</th>
+        <td>男</td>		
+    </tr>
+	<tr>
+        <th>身份证号</th>
+        <td>440883</td>		
+    </tr>
+	
+
+</table>
+
+<table  width="100%" height="200px"  cellspacing="0px" style="border-collapse:collapse"  >
+
+	<tr>
+	<br/>
+    <td rowspan="3" align="left"  valign="top">本人已学习xx岗位上岗培训，了解xx岗位工作规范，并愿意遵守xx部门工作规则，保证在安全规章下规范操作。如有违反，责任自负。
+	</td>
+	</tr>
+</table>
+
+<table  width="100%"    cellspacing="0px" style="border-collapse:collapse">
+<tr>
+	    <td>单位盖章</td>
+        <td></td>
+	    <td>签名</td>
+        <td></td>
+		</tr>
+<tr>		
+	    <td  colspan="2"></td>
+	    <td>日期</td>
+        <td></td>
+		</tr>		
+</table>
+<!-----------end print----------->
+</div>
+
+</div>
+
+<div id="tips">
+<div id="lefttips">
+<h1>取回执</h1>
+<div id="tipsitem">
+<ol class="tip">
+
+
+<span>
+取走回执单
+ <hr>
+<!-- 
+<img id="headimg" src="images/heads.jpg"/>
+时间控件
+ -->
+
+<li >根据提示取走回执单</li>
+<hr>
+<li >取回执并盖章签字</li>
+<hr>
+<li >培训完成</li>
+<hr>
+</span>
+<!-- 
+<div id="idinfo">
+<img id="headimg" src="images/heads.jpg"/>
+</div>
+ -->
+
+</ol>
+</br>
+</br>
+<div class="nextstep" >
+<!-- 
+<input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="readCard()" value="确认"/>
+-->
+<!-- 
+<input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="ondivprint()" value="打印回执"/>
+ -->
+<input type="button" class="btn" name="buttonPre" id="buttonPre"  onclick="backward2main()" value="返回首页"/>
+</div>
+
+</div>
+
+
+
+</div>
+</div>
+
+
+
+
+<div id="footer">
+Copyright ? www.isa-hsse.com
+</div>
+
+</body>
+</html>

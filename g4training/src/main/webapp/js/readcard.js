@@ -33,7 +33,33 @@ function readCard()
 	 * 2，如果读取身份证信息不成功，提示读取失败，提示请重新放置
 	 * 3，如果读取身份证成功，跳转
 	 */
-	
+	var retCnt = ID100Control.Connect();
+	alert(retCnt);
+	if(retCnt){
+	    var btsr = ID100Control.ReadContentEx();
+	    var idJson = eval("(" + btsr + ")");
+	    var retInfo = idJson;
+	    alert(retInfo.ret);
+	    var retv = retInfo.ret;
+	 // ID100Control.disconect();
+	    if(retv == 0){
+	    	alert(retInfo.info.name);
+	    	//location.href='confirminfo.html?cc='+retInfo.info.name;
+	    	location.href='confirminfo.html?retinfo='+btsr;
+	    	//
+	    	//document.location.href("confirminfo.html?cc="+getval);
+	    	//?cc="+getval)
+	    	//var bgdiv = document.getElementById("redcarrev");
+	    	//bgdiv = retv;
+	    	
+	    }else
+	    {
+	     //改提示	
+	    	var bgdiv = document.getElementById("redcarrev");
+	    	bgdiv.innerHTML=retv;
+	    }
+	   
+	}
 	/*
 	var retCnt = ID100Control.Connect();
 	//alert(retCnt);
@@ -47,6 +73,9 @@ function readCard()
 		return;
 	}
 	*/
-	location.href='confirminfo.html';
+	/*
+	读取不成功时不进行下一步
+	*/
+	//location.href='confirminfo.html';
 	
 }	

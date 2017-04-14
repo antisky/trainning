@@ -1,3 +1,7 @@
+var thisURL = document.URL; 
+var getval =thisURL.split('?')[1];  
+var btsr= getval.split("=")[1];  
+
 function confirmme()
 {
 	/**
@@ -15,11 +19,23 @@ function confirmme()
 	//headimg.src=myimg;
 	headimg.src = 'images/heads.jpg';
 	*/
+	
+	var idJson = eval("(" + btsr + ")");
+	//头像字符长度超过IE的get限制，无法使用get方式
+    var retInfo = idJson;
+    alert(retInfo.info.name);
+    //alert(retInfo.ret);
+	//alert(btsr);
+    
+	//alert(retInfo.info.name) 
 	var headimg = document.getElementById("headimg");
 	headimg.src = 'images/heads.jpg';
 	var username = document.getElementById("username");
 	var birth = document.getElementById("birthtdate");
+	var gender = document.getElementById("gender");
+	
 	username.innerHTML="姓名:李*";
+	gender.innerHTML="性别:男";
 	birth.innerHTML="出生年月:2017年4月12日";
 }	
 
