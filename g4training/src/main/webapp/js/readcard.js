@@ -7,6 +7,7 @@ var sampleRet =  {"ret":"0",  "info":{"cardno":"35058319851005547X","name":" 陈
 //证书的起始编号
 var i_siq=1;
 var debugf=true;
+var headimgsrc;
 
 function backward2main()
 {
@@ -17,6 +18,24 @@ function backward2main()
 	//window.open('readcard.html','','width=720,height=500,resizable=yes,scrollbars=yes,status=no');
 	
 }	
+
+function openNewImg( headphoto){
+	OpenWindow=window.open("", "newwin", "height=250, width=250,toolbar=no ,scrollbars="+scroll+",menubar=no"); 
+	OpenWindow.document.write("<TITLE>Test</TITLE>");  
+	OpenWindow.document.write("<BODY BGCOLOR=#ffffff>");  
+	OpenWindow.document.write("<h1>Hello!</h1>");  
+	OpenWindow.document.write("New window opened!<br> is Good"); 
+	//var headdata="data:image/jpg;base64,+img
+	//<img src="readid.jpg" />
+	//</image>
+	//var imgsrc = '<img src='+'"readid.jpg"'+'/>';
+	var imgsrc3 = '<img src='+headphoto+'/>';
+	OpenWindow.document.write("<br/>")
+	OpenWindow.document.write(imgsrc3);
+	OpenWindow.document.write("</BODY>");  
+	OpenWindow.document.write("</HTML>");  
+	OpenWindow.document.close();
+}  
 
 //获取当前时间，格式YYYY-MM-DD
 function getNowFormatDate( seperator1) {
@@ -76,16 +95,28 @@ function setReceipt(){
 	
 
 	
-	rphoto.src = 'images/big.jpg';
-	/*
-	if(debugf){
+	//rphoto.src = 'images/big.jpg';
+	
+	if(debugf)
+	{
+		//使用盖茨的头像
 		rphoto.src = 'images/big.jpg';
-		//headimg.src = 'images/big.jpg';
+		//这个是本人的头像
+		//rphoto.src = myimg;
 	}else{
 		//headimg.src = '"data:image/png;base64,'+udata.photo+'"';
-		rphoto.src =  '"data:image/png;base64,'+udata.photo+'"';
+		//rphoto.src =  '"data:image/png;base64,'+udata.photo+'"';
+		//直接方式行不通，需要插入方式
+		//alert(headimgsrc);
+		//rphoto.src=headimgsrc;
+		
+		//我的头像保存成BASE64方式
+		//rphoto.src = myimg;
+		//直接生成元素，非更新图片源方式
+		resetPreviewPhoto();
 	}
-	*/
+	
+	
 	
 	rname.innerHTML=udata.name;
 	rgender.innerHTML=udata.sex;
@@ -97,22 +128,7 @@ function setReceipt(){
 	ruid.innerHTML=sidShow;
 	runo.innerHTML='X-'+getNowFormatDate('')+i_siq;
 	i_siq++;
-	
-	//uid
-	//ugender
-	//ubdate
-	//uno
-
-	/*
-	headimg.src = 'images/heads.jpg';
-	username.innerHTML="李*";
-	gender.innerHTML="男";
-	birth.innerHTML="2017年4月12日";
-	*/
-	
-
-	
-	
+		
 }
 
 
@@ -225,7 +241,19 @@ function changetip2confirm(){
 }
 
 
+function resetCardTip(){
+	  //documen.body.innerHTML += "<img src='1111.jpg' />";
+	
+	var headimg = document.getElementById("headicon");
+	headimg.innerHTML="<img height='200px' id='headimg' src="+headimgsrc+" />";
+}
 
+function resetPreviewPhoto(){
+	  //documen.body.innerHTML += "<img src='1111.jpg' />";
+	
+	var headimg = document.getElementById("previewHeadIcon");
+	headimg.innerHTML="<img height='200px' id='uphoto' src="+headimgsrc+" />";
+}
 
 function showcardtip()
 {
@@ -258,7 +286,17 @@ function showcardtip()
 	birth.innerHTML="2017年4月12日";
 	*/
 	
-	headimg.src = 'images/big.jpg';
+	
+	//headimg.src = 'images/big.jpg';
+	if(!debugf){
+		//headimg.src = headimgsrc;
+		//headimg.src  = 'images/big.jpg';
+		resetCardTip();
+	}else{
+		headimg.src  = 'images/big.jpg';
+		
+	}
+	//myalert("tip:"+debugf);
 	/*
 	if(debugf){
 		headimg.src = 'images/big.jpg';
@@ -266,6 +304,7 @@ function showcardtip()
 		headimg.src = '"data:image/png;base64,'+udata.photo+'"';
 	}
 	*/
+	
 	//var headph = '"data:image/png;base64,'+retInfo.info.photo+'"';
 	username.innerHTML=udata.name;
 	gender.innerHTML=udata.sex;
@@ -338,6 +377,11 @@ function readCard()
 	    	//location.href='confirminfo.html?retinfo='+btsr;
 	    	//改用元素修改方式
 	    	debugf = false;
+	    	myalert(debugf);
+	    	//var headph = '"data:image/png;base64,'+retInfo.info.photo+'"';
+	    	headimgsrc = '"data:image/png;base64,'+udata.photo+'"';
+	    	
+	    	openNewImg(headimgsrc);
 			change2confrimstate();
 
 	    	
