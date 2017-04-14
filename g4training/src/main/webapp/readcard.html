@@ -8,23 +8,13 @@
 <style>
 </style>
 
-<!--  
-<script type="text/javascript" src="trainmain.js">
-</script> 
--->
+
 <script type="text/javascript" src="js/readcard.js"></script>
 <script type="text/javascript" src="js/trainmain.js"></script>
 <script type="text/javascript" src="js/testmyhead.js"></script>
-<!-- 
-<script type="text/javascript">
-function foward2readcard()
-{
-	//alert("hello world");
-	location.href='readcard.html';
-	
-}
-</script>
- --> 
+<!--  
+<script type="text/javascript" src="js/confirm.js"></script>
+-->
 </head>
 
 <body>
@@ -33,19 +23,103 @@ function foward2readcard()
 </div>
 
 
+<!---------左边提示部分----------------->
+
 <div id="nowrap">
-<img src="images/readid.jpg" height="500px" ></td>
+<img id="readidimg" src="images/readid.jpg" height="500px" ></td>
+
+<video id="viewvidio" src="video/panda.mp4" controls="controls" height="500px"  border="5" style="display:none">
+</video>
+
+<!-------待打印表格部分 ----------------->
+<div id="printdiv" style="display:none">
+<table width="100%"    cellspacing="0px" style="border-collapse:collapse" >
+<caption>
+<h1>电信培训上岗确认书</h1>
+</caption>
+<!--
+tr 行
+td 列
+-->
+
+    <tr>  
+	    <th>姓名</th>
+        <td><span id="uname">李x</span></td>
+		
+		<td rowspan="5">
+		<img id="uphoto" src="images/heads.jpg"/>
+		</td>
+    </tr>
+	
+	<tr>
+        <th>证书编号</th>
+        <td><span id="uno">x0099</span></td>	
+    </tr>
+	
+    <tr>
+        <th>出生年月</th>
+        <td><span id="ubdate">2017年4月13日</span></td>	
+    </tr>
+	<tr>
+        <th>性别</th>
+        <td><span id="ugender">男</span></td>		
+    </tr>
+	<tr>
+        <th>身份证号</th>
+        <td><span id="uid">440883</span></td>		
+    </tr>
+	
+
+</table>
+
+<table  width="100%" height="200px"  cellspacing="0px" style="border-collapse:collapse"  >
+
+	<tr>
+	<br/>
+    <td rowspan="3" align="left"  valign="top">本人已学习xx岗位上岗培训，了解xx岗位工作规范，并愿意遵守xx部门工作规则，保证在安全规章下规范操作。如有违反，责任自负。
+	</td>
+	</tr>
+</table>
+
+<table  width="100%"    cellspacing="0px" style="border-collapse:collapse">
+<tr>
+	    <td>单位盖章</td>
+        <td></td>
+	    <td>签名</td>
+        <td></td>
+		
+		<!--
+		<td><span id="signDate"></span></td>
+		-->
+		</tr>
+		
+		
+<tr>		
+	    <td  colspan="2"></td>
+	    <td>日期</td>
+		
+        <td><span id="signDate"></span></td>
+		</tr>		
+</table>
+
 </div>
+<!--endprint-->
+
+</div>
+
+<!--------- 右边部分 ------------------>
 
 <div id="tips">
 <div id="lefttips">
-<h1>读取身份证</h1>
+<h1  id="tipstitle">读取身份证</h1>
 <div id="tipsitem">
  
+<!-- 读卡tip区提示 -->
+<span id="readcardtip"> 
 <ol class="tip">
-
-
+<!--
 <span>
+-->
  请认真阅读使用流程并按提示进行
 <hr>
 <li>按图示把身份证放在读卡器上面</li>
@@ -56,25 +130,81 @@ function foward2readcard()
 <hr>
 <li id="errtips">读卡结果:<span id="redcarrev"></span></li>
 <hr>
-
-</span>
-</ol>
-
 <!--
-<span>
- 请认真阅读使用流程并按提示进行培训
+</span>
+-->
+</ol>
+</span>
+
+<!-- 确认区tip区提示 -->
+<span id="confirmtip" style="display:none">
+<table  rules="rows"  >
+<tr>
+<td>
+<img id="headimg" />
+</td>
+
+<td>
+<ol class="tip">
+
+<li >姓名:<span id="username"></span></li>
 <hr>
-<li>按图示把身份证放在读卡器上面</li>
+<li >性别:<span id="gender"></span></li>
 <hr>
-<li>读取身份证后核对个人信息</li>
+<li>出生年月:<span id="birthtdate"></span></li>
 <hr>
-<li>核对正确无误后确认</li>
+
+</ol>
+</td>
+</tr>
+<hr />
+</table>
+</span>
+
+<!-- ppt提示 -->
+<span  id="ppttip" style="display:none">
+<ol class="tip">
+请认真学习培训材料，并领取培训凭证
+ <hr>
+<!-- 
+<img id="headimg" src="images/heads.jpg"/>
+时间控件
+ -->
+<li id="username">学习培训材料</li>
 <hr>
-<li>取回身份证</li>
+<li id="birthtdate">打印凭证</li>
+<hr>
+</ol>
+</span>
+
+
+<!--打印预览 -->
+<span  id="previewtip" style="display:none">
+<ol class="tip">
+打印回执并取走回执单
+<hr>
+<li >核对个人信息</li>
+<hr>
+<li >确认无误后打印</li>
+<hr>
+<li >取回执</li>
+<hr>
+</ol>
+</span>
+<!--
+<span  id="previewtip" style="display:none">
+<ol class="tip">
+打印回执并取走回执单
+<hr>
+<li >核对个人信息</li>
+<hr>
+<li >确认无误后打印</li>
+<hr>
+<li >取回执</li>
 <hr>
 </span>
-</ol>
 -->
+
 
 <div class="nextstep">
 <input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="readCard()" value="确认"/>

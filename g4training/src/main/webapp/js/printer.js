@@ -1,23 +1,4 @@
-/*
-function printsht( headphoto){
-OpenWindow=window.open("", "newwin", "height=250, width=250,toolbar=no ,scrollbars="+scroll+",menubar=no"); 
-OpenWindow.document.write("<TITLE>回执表</TITLE>");  
-OpenWindow.document.write("<BODY BGCOLOR=#ffffff>");  
-OpenWindow.document.write("<h1>Hello!</h1>");  
-OpenWindow.document.write("New window opened!<br> is Good"); 
-//var headdata="data:image/jpg;base64,+img
-//<img src="readid.jpg" />
-//</image>
-var imgsrc = '<img src='+'"readid.jpg"'+'/>';
-var imgsrc2 = '<img src='+headdata+'/>';
-var imgsrc3 = '<img src='+headphoto+'/>';
-OpenWindow.document.write("<br/>")
-OpenWindow.document.write(imgsrc3);
-OpenWindow.document.write("</BODY>");  
-OpenWindow.document.write("</HTML>");  
-OpenWindow.document.close();
-}  
-*/
+
 /**
  *
  * open一个已有页面，页面onload的时候，自动打印
