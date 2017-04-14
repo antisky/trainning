@@ -3,9 +3,10 @@
 var state="s_readcard";
 //用户信息
 var udata;
-var sampleRet =  {"ret":"0",  "info":{"cardno":"35058319851005547X","name":" 陈**","sex":"男","nation":" 汉","birth":"1985年*月* 日","address":"福建省南安市*","org":"南安市公安局"}};
+var sampleRet =  {"ret":"0",  "info":{"cardno":"35058319851005547X","name":" 陈**","sex":"男","nation":" 汉","birth":"1985年*月* 日","address":"福建省南安市*","org":"南安市公安局","photo":"x"}};
 //证书的起始编号
 var i_siq=1;
+var debugf=true;
 
 function backward2main()
 {
@@ -35,7 +36,7 @@ function getNowFormatDate( seperator1) {
 }
     
 	
-function change2confrimtate(){
+function change2confrimstate(){
 	
 	//changetip2confirm();
     changeview2takeof();
@@ -73,7 +74,19 @@ function setReceipt(){
 	var ruid    = document.getElementById("uid");
 	var runo   =  document.getElementById("uno");
 	
+
+	
 	rphoto.src = 'images/big.jpg';
+	/*
+	if(debugf){
+		rphoto.src = 'images/big.jpg';
+		//headimg.src = 'images/big.jpg';
+	}else{
+		//headimg.src = '"data:image/png;base64,'+udata.photo+'"';
+		rphoto.src =  '"data:image/png;base64,'+udata.photo+'"';
+	}
+	*/
+	
 	rname.innerHTML=udata.name;
 	rgender.innerHTML=udata.sex;
 	rbirth.innerHTML=udata.birth;
@@ -211,6 +224,9 @@ function changetip2confirm(){
     conftip.style.display="block";
 }
 
+
+
+
 function showcardtip()
 {
 	/**
@@ -242,8 +258,15 @@ function showcardtip()
 	birth.innerHTML="2017年4月12日";
 	*/
 	
-	//headimg.src = 'images/heads.jpg';
 	headimg.src = 'images/big.jpg';
+	/*
+	if(debugf){
+		headimg.src = 'images/big.jpg';
+	}else{
+		headimg.src = '"data:image/png;base64,'+udata.photo+'"';
+	}
+	*/
+	//var headph = '"data:image/png;base64,'+retInfo.info.photo+'"';
 	username.innerHTML=udata.name;
 	gender.innerHTML=udata.sex;
 	birth.innerHTML=udata.birth;
@@ -314,7 +337,8 @@ function readCard()
 	    	//不使用跳转方式//
 	    	//location.href='confirminfo.html?retinfo='+btsr;
 	    	//改用元素修改方式
-			change2confrimtate();
+	    	debugf = false;
+			change2confrimstate();
 
 	    	
 	    }else
@@ -332,7 +356,7 @@ function readCard()
 			//跳过读卡器检测，在没有读卡器的情况下test
 	    	{
 	    	udata = sampleRet.info;
-			change2confrimtate();
+	    	change2confrimstate();
 	    	}
 			//此时状态机要转换成视频状态
 	}
