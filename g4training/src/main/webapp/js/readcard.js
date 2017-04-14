@@ -381,7 +381,7 @@ function readCard()
 	    	//var headph = '"data:image/png;base64,'+retInfo.info.photo+'"';
 	    	headimgsrc = '"data:image/png;base64,'+udata.photo+'"';
 	    	
-	    	openNewImg(headimgsrc);
+	    	//openNewImg(headimgsrc);
 			change2confrimstate();
 
 	    	
