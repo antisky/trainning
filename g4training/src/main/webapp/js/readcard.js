@@ -4,6 +4,7 @@ var state="s_readcard";
 //用户信息
 var udata;
 var sampleRet =  {"ret":"0",  "info":{"cardno":"35058319851005547X","name":" 陈**","sex":"男","nation":" 汉","birth":"1985年*月* 日","address":"福建省南安市*","org":"南安市公安局"}};
+//证书的起始编号
 var i_siq=1;
 
 function backward2main()
@@ -72,11 +73,15 @@ function setReceipt(){
 	var ruid    = document.getElementById("uid");
 	var runo   =  document.getElementById("uno");
 	
-	rphoto.src = 'images/heads.jpg';
+	rphoto.src = 'images/big.jpg';
 	rname.innerHTML=udata.name;
 	rgender.innerHTML=udata.sex;
 	rbirth.innerHTML=udata.birth;
-	ruid.innerHTML=udata.cardno;
+	//身份证敏感信息需要用****替换
+	var sidShow = udata.cardno.substr(0,udata.cardno.length-8);
+	sidShow = sidShow+"********";
+	//ruid.innerHTML=udata.cardno;
+	ruid.innerHTML=sidShow;
 	runo.innerHTML='X-'+getNowFormatDate('')+i_siq;
 	i_siq++;
 	
@@ -237,12 +242,18 @@ function showcardtip()
 	birth.innerHTML="2017年4月12日";
 	*/
 	
-	headimg.src = 'images/heads.jpg';
+	//headimg.src = 'images/heads.jpg';
+	headimg.src = 'images/big.jpg';
 	username.innerHTML=udata.name;
 	gender.innerHTML=udata.sex;
 	birth.innerHTML=udata.birth;
 	
 }	
+
+function myalert(tip){
+	//打开可以alert出调试信息
+	//alert(tip);
+}
 
 function readCard()
 {
@@ -270,7 +281,7 @@ function readCard()
 	 改成直接修改div的显示方式
 	 */
 	 
-	 alert(state);
+	myalert(state);
 	 if(state == "s_confirm"){
 		 change2viewstate();
 		 return;
@@ -288,7 +299,7 @@ function readCard()
 	//readcardstate
 	 
 	var retCnt = ID100Control.Connect();
-	alert(retCnt);
+	myalert(retCnt);
 	if(retCnt){
 	    var btsr = ID100Control.ReadContentEx();
 	    var idJson = eval("(" + btsr + ")");

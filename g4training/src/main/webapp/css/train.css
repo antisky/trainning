@@ -67,8 +67,10 @@
 
 #lefttips {
    
+   /*
     border-style:dashed; 
     padding:1px;
+    */
     
    /*
     background-color:#eeeeee;
@@ -142,10 +144,14 @@ ol.tip span {
 	
 .nextstep {
 	/*
+	debug setting
 	background-color:yellow;
-	*/
+	
 	border-style:dashed; 
     padding:1px;
+    
+	*/
+
     
 	bottom:10px;
     width:100%; 
