@@ -1,0 +1,219 @@
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+    /*
+    
+    */
+}
+
+#nowrap {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:600px;
+    width:80%; 
+     
+    float:left;
+    /*
+    border-style:dashed;
+     width:60%; 
+    padding:5px;	
+    */  
+       
+}
+
+#wellcomeboard {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:600px;
+    width:100%; 
+    /*
+    border-style:dashed;
+     width:60%; 
+    padding:5px;	
+    */  
+       
+}
+
+/*
+ padding-bottom:20px; 
+*/
+
+
+
+
+
+#tips {
+   
+
+
+    
+   /*
+    background-color:#eeeeee;
+    */
+    overflow:hidden
+    height:550px;
+    /*
+    width:20%; 
+    */
+    background-color:#eeeeee;
+    line-height:30px;
+   
+    float:right;
+    white-space: nowrap;
+    text-align:center;
+    /*
+     
+    */
+   
+    /*
+    border-style:dashed; 
+    width:auto; 
+      padding:5px;
+    overflow:hidden
+    width:450px;
+    float:right;
+    float:right;
+     float:left;
+     clear:both;
+    */	      
+}
+
+#lefttips {
+   
+   /*
+    border-style:dashed; 
+    padding:1px;
+    */
+    
+   /*
+    background-color:#eeeeee;
+    */
+    overflow:hidden
+    height:550px;
+    width:100%; 
+  
+    line-height:30px;
+   
+    float:left;
+    white-space: nowrap;
+    text-align:center;
+     
+}
+
+#tipsitem {
+   
+   /*
+    background-color:#eeeeee;
+    */
+  
+    overflow:hidden
+    height:100%;
+    width:100%; 
+    text-align:left; 
+  
+    line-height:30px;
+    font-size:20px;
+    float:right;
+    white-space: nowrap;
+    
+
+    /*
+        border-style:dashed; 
+    padding:5px;
+    text-align:left;
+    */
+      
+}
+
+#printdiv {
+   
+
+    overflow:hidden
+    height:100%;
+    width:100%; 
+    
+      
+}
+
+#idinfo {
+   
+
+    overflow:hidden
+    height:100%;
+    width:100%; 
+    text-align:left; 
+  
+    line-height:30px;
+    font-size:20px;
+    float:right;
+    white-space: nowrap;
+    
+      
+}
+
+ol.tip span {
+	font-weight:bold;
+	color:#ff9955;
+	}
+	
+.nextstep {
+	/*
+	debug setting
+	background-color:yellow;
+	
+	border-style:dashed; 
+    padding:1px;
+    
+	*/
+
+    
+	bottom:10px;
+    width:100%; 
+    text-align:center;
+
+	}	
+	
+.btn{
+    width:200px;
+    height:50px;
+    font-size:20px;
+}	
+
+
+.moviebtn{
+    width:100px;
+    height:20px;
+    font-size:15px;
+}	
+
+/**
+热敏打印机的打印设置
+.sheetcss5{width:300px;height:50px;border:1px solid #F00 ;border-right:1px solid #F00;border-bottom:1px} 
+.table-c table{border-right:1px solid #F00;border-bottom:1px solid #F00}
+.sheetcss5{width:300px;height:50px;border:1px solid #F00 ;border-right:1px solid #F00;border-bottom:1px} 
+*/
+
+
+/**
+可见但不打印
+*/
+.noprint{visibility:hidden}
+
+#tiscontain {
+	line-height:30px;
+    background-color:#eeeeee;
+    padding:5px;
+    height:550px;
+    clear:both;
+    width:100%; 
+}
+
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}

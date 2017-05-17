@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+ <!-- 打印机驱动 -->
+ <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height=0 id=wb name=wb width=0></OBJECT>
+ <!-- 读卡器驱动 -->
+ <OBJECT ID="ID100Control" CLASSID="CLSID:BAD80877-E3D2-41CC-91AE-C7FD9D019E36"></OBJECT>
+ <link rel="stylesheet" type="text/css" href="../css/train.css" />
+<style>
+</style>
+
+<!-- 
+<script type="text/javascript" src="../js/d_testmyhead.js"></script>
+-->
+<script type="text/javascript" src="../js/c_viewselect.js"></script>
+<script type="text/javascript" src="../js/c_readcard.js"></script>
+</head>
+
+<body>
+<div id="header">
+<h1>ISA HSSE Training System</h1>
+</div>
+
+
+<!---------左边提示部分----------------->
+<div id="nowrap">
+
+<!--使用说明区域 -->
+<span id="readcardtip"> 
+<ol class="tip">
+说明:把身份证放在读卡器上方并点击确认按钮，读取完成后请取走证件，全部读取完毕后点击下一步按钮
+<hr>
+</ol>
+</span>
+
+<!-- 点击确认后显示该userdetail界面,同时把readidimg显示为空 -->
+<div id="printdiv" style="display:none">
+<!--  个人信息显示区  border="1" -->
+ <table width="100%"   height="400px"  cellspacing="0px"  style="border-collapse:collapse" >
+    <tr> 
+        <th colspan="3">核对信息</th> 
+    </tr>
+
+   <tr>
+        <td rowspan="3">
+        	<div id="previewHeadIcon">
+        	<img id="uphoto"   height="200px"/>
+        	<!--  
+		     <img id="photo" src="../img/testhead.jpg" height="200px"/>
+		     -->
+		    </div>
+        </td>
+        <td>姓名</td>
+        <td><span id="name">李x</span></td>		
+    </tr>
+    
+    <tr>
+        <td>身份证号</td>
+        <td><span id="cardno">4408831980********</span></td>		
+    </tr>
+    
+    <tr>
+        <td>性别</td>
+        <td><span id="gender">男</span></td>		
+    </tr>
+</table> 
+
+</div>
+
+<div id="guaidview">
+<CENTER>
+<img id="readidimg" src="../img/readid.jpg" height="400px" />
+</CENTER>
+</div>
+
+<div id="confirmbtn">
+<CENTER>
+ <input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="readCard()" value="确认"/>
+<CENTER>
+</div>
+
+
+</div>
+
+
+<!--------- 右边部分 ------------------>
+
+<div id="tips">
+<input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="go2sheet()" value="下一步"/>
+<br>
+<input type="button" class="btn" name="buttonPre" id="buttonPre"  onclick="backward2main()" value="返回"/>
+</div>
+
+
+
+
+<div id="footer">
+Copyright ? www.isa-hsse.com
+</div>
+
+</body>
+</html>

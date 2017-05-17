@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8"> 
+ <!-- 打印机驱动 -->
+ <OBJECT classid="CLSID:8856F961-340A-11D0-A96B-00C04FD705A2" height=0 id=wb name=wb width=0></OBJECT>
+ <!-- 读卡器驱动 -->
+ <OBJECT ID="ID100Control" CLASSID="CLSID:BAD80877-E3D2-41CC-91AE-C7FD9D019E36"></OBJECT>
+ <link rel="stylesheet" type="text/css" href="../css/train.css" />
+<style>
+</style>
+
+<!-- 
+<script type="text/javascript" src="../js/d_testmyhead.js"></script>
+-->
+<script type="text/javascript" src="../js/c_viewselect.js"></script>
+<script type="text/javascript" src="../js/c_readcard.js"></script>
+</head>
+
+<body>
+<div id="header">
+<h1>ISA HSSE Training System</h1>
+</div>
+
+
+<!---------左边提示部分----------------->
+<div id="nowrap">
+
+<!--使用说明区域 -->
+<span id="readcardtip"> 
+<ol class="tip">
+请确认签到人员资料，确认后点击下一步观看培训资料
+<hr>
+</ol>
+</span>
+
+<!-- 点击确认后显示该userdetail界面,同时把readidimg显示为空 -->
+
+<!-- 
+<div id="sheetdiv" style="display:none">
+<CENTER>
+<table id="datasheet"  class="sheetcss5" >
+</table>
+</CENTER>
+</div>
+-->
+<div id="sheetdiv" style="display:none">
+
+<!--startprint-->
+<link rel="stylesheet" type="text/css" href="../css/viewprintdiv.css" />
+<CENTER>
+<div id="sheetprint" class="sheetcss5">
+<table id="datasheet" >
+</table>
+</div>
+</CENTER>
+<!--endprint-->
+</div>
+
+<div id="confirmbtn">
+<CENTER>
+ <input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="showsheet()" value="确认"/>
+<CENTER>
+</div>
+
+
+</div>
+
+
+<!--------- 右边部分 ------------------>
+
+<div id="tips">
+<input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick=" previewPrint()" value="下一步"/>
+<br>
+<input type="button" class="btn" name="buttonPre" id="buttonPre"  onclick="backward2main()" value="返回"/>
+</div>
+
+
+
+
+<div id="footer">
+Copyright ? www.isa-hsse.com
+</div>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+/*
+.sheetcss5 table{font-size:20px; border-right:1px solid #F00;border-bottom:1px solid #F00}
+*/
+.sheetcss5 table{border-right:1px solid #F00;border-bottom:1px solid #F00}
+.sheetcss5 table td{ border-left:1px solid #F00;border-top:1px solid #F00}
+.sheetcss5 table th{ border-left:1px solid #F00;border-top:1px solid #F00}

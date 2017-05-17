@@ -9,6 +9,31 @@ var i_siq=1;
 var debugf=true;
 var headimgsrc;
 
+
+function openppt(){
+
+theObjects = document.getElementsByTagName("object");
+for (var i = 0; i < theObjects.length; i++)
+{
+	theObjects[i].outerHTML = theObjects[i].outerHTML;
+}
+	//var cmd = new ActiveXObject('WScript.Shell');
+	//cmd.Run('PowerPnt.exe   E:/git/g4training/src/main/webapp/doc/officehse.pptx');
+    /*
+	var cmd = new ActiveXObject('WScript.Shell');
+	//wps使用的媒体是相对当前路径，可以正常播放
+	cmd.Run('PowerPnt.exe   E:/git/g4training/src/main/webapp/doc/wpshse.pptx');
+	//源文件用了绝对路径，导致提示ActiveX危险，无法播放外部源
+	cmd.Run('PowerPnt.exe   E:/git/g4training/src/main/webapp/doc/officehse.pptx');
+	*/
+	//cmd.Run('PowerPnt.exe   E:/git/g4training/src/main/webapp/doc/help.pptx');
+	//cmd.Run('PowerPnt.exe   E:/git/g4training/src/main/webapp/doc/oracle.ppt');
+	//	cmd.Run('PowerPnt.exe   E:/git/g4training/src/main/webapp/doc/hse.pptx');
+	//	cmd.Run('PowerPnt.exe   E:/hse/hse.pptx');
+	//cmd.Run('PowerPnt.exe   http://59.37.55.54:9022/payportal/webpages/webapp/doc/oracle.ppt');
+	//cmd.Run('winword E:/git/g4training/src/main/webapp/doc/funct.docx');  
+}
+
 function backward2main()
 {
 	//location.href=history.go(-1);
@@ -142,14 +167,21 @@ function change2viewstate(){
 	var divread = document.getElementById("readidimg");
 	divread.style.display="none";
     
+	/*
     var bgdiv = document.getElementById("viewvidio");
     bgdiv.style.display="block";
-	
+	*/
+	//换成打开ppt
+    var bgdiv = document.getElementById("viewvidio");
+    bgdiv.style.display="block";
+    
 	var ppttip = document.getElementById("ppttip");
 	ppttip.style.display="block";
     
     var confirmtip = document.getElementById("confirmtip");
     confirmtip.style.display="none";
+    
+    openppt();
 	
 	state="s_viewppt";
 }
@@ -199,7 +231,7 @@ function goprint()
 	 * 如果读取的内容非空，则进行下一步
 	 * 读取的身份证信息，如果图片大小过大，会导致长度过大
 	 */
-	//preview(); 
+	preview(); 
 	location.href='getpaper.html';
 }
 

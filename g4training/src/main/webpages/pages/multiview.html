@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<!-- 
+显示多个影片
+下发四个按钮，点击后依次修改embbed控件的内容为对应的url
+右边是 下一步，返回
+ -->
+<link rel="stylesheet" type="text/css" href="../css/train.css" />
+<script type="text/javascript" src="../js/c_viewselect.js"></script>
+<script type="text/javascript" src="../js/c_playmovie.js"></script>
+</head>
+
+<body>
+<div id="header">
+<h1>ISA HSSE Training System</h1>
+</div>
+<div id="nowrap">
+<div id="views">
+
+<!-- 
+<param name="movie" value="安厦系统科技成都有限责任公司.swf" />
+<embed id="viewvidio" src="../video/hse2asf.swf" quality="high" bgcolor="#ffffff" width="722" height="577" name="presentation" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" allowFullScreen="true" />
+-->
+
+<!--
+<object id="presentation" width="722" height="577" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="hse2asf.swf" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<param name="allowFullScreen" value="true" />
+<embed  id="viewvidio" src="../video/hse2asf.swf" controls quality="high" bgcolor="#ffffff" width="722" height="577" name="presentation" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" allowFullScreen="true" />
+</object>
+-->
+<span id="videospan">
+<object id="presentation" width="722" height="577" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="ase" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#ffffff" />
+<param name="allowFullScreen" value="true" />
+<embed  id="viewvidio" src="../video/ase1.swf" controls quality="high" bgcolor="#ffffff" width="722" height="577" name="presentation" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" allowFullScreen="true" />
+</object>
+</span>
+<!--
+<video width="320" height="240" controls="controls">
+  <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg">
+  <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+-->
+<!--
+<span id="videospan">
+<embed  id="viewvidio" src="../video/ase1.swf"   controls="controls" quality="high" bgcolor="#ffffff" width="722" height="577" name="presentation" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.adobe.com/go/getflashplayer" allowFullScreen="true" />
+</span>
+-->
+<div id="newtips">
+<input id="vbt1" type="button" class="moviebtn" name="button1"  onclick="changemovie('ase1',this)"  value="第1节"/>
+<input id="vbt2" type="button" class="moviebtn" name="button2"  onclick="changemovie('ase2',this)"  value="第2节"/>
+<input id="vbt3" type="button" class="moviebtn" name="button3"  onclick="changemovie('ase3',this)"  value="第3节"/>
+<input id="vbt4" type="button" class="moviebtn" name="button4"  onclick="changemovie('ase4',this)"  value="第4节"/>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+
+<div id="tips">
+<input type="button" class="btn" name="buttonNex" id="buttonNex"  onclick="go2sheet()" value="下一步"/>
+<br>
+<input type="button" class="btn" name="buttonPre" id="buttonPre"  onclick="backward2main()" value="返回"/>
+</div>
+
+<div id="footer">
+Copyright ? www.isa-hsse.com
+</div>
+
+</body>
+</html>
