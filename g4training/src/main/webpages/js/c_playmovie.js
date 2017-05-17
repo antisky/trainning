@@ -1,3 +1,6 @@
+/**
+ * 初始化部分
+ */
 
 theObjects = document.getElementsByTagName("object");
 for (var i = 0; i < theObjects.length; i++)
@@ -9,15 +12,12 @@ for (var i = 0; i < theObjects.length; i++)
 
 /*
 function changemovie() {
-
-  
   theObjects = document.getElementsByTagName("object");
   for (var i = 0; i < theObjects.length; i++)
   {
 	 theObjects[i].outerHTML = theObjects[i].outerHTML.replace("ase1","ase2");
 	 //theObjects[i].outerHTML = theObjects[i].outerHTML; 
   }
-  
 }
 */
 var curvideo="ase1";

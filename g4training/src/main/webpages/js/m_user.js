@@ -22,11 +22,3 @@ Person.prototype = {
   },
 }
  
-/*
-var p = new Person();
-console.log(p.getName()); //张三
-console.log(p.getJob()); //teacher
-var p2 = new Person();
-p2.name = "李四";
-console.log(p2.getName()); //李四
-*/

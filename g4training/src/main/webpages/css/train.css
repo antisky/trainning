@@ -19,8 +19,7 @@
     border-style:dashed;
      width:60%; 
     padding:5px;	
-    */  
-       
+    */        
 }
 
 #wellcomeboard {
@@ -181,6 +180,19 @@ ol.tip span {
     font-size:20px;
 }	
 
+.maindiv {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:600px;
+    width:80%; 
+     
+    float:left;
+    /*
+    border-style:dashed;
+     width:60%; 
+    padding:5px;	
+    */        
+}
 
 .moviebtn{
     width:100px;
